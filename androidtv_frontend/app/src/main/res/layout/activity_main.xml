@@ -24,7 +24,7 @@
         android:id="@+id/subtitle_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ready for rating screen integration"
+        android:text="Ready for Home Page and Content Info navigation"
         android:textSize="24sp"
         android:textColor="#CCCCCC"
         android:layout_marginTop="24dp"
@@ -40,11 +40,27 @@
         android:textAllCaps="false"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:nextFocusUp="@id/title_text"
-        android:nextFocusDown="@id/title_text"
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@+id/subtitle_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toStartOf="@+id/btn_open_home_page"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_open_home_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Home Page"
+        android:textAllCaps="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="@+id/btn_open_content_info"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_open_content_info"
+        app:layout_constraintStart_toEndOf="@+id/btn_open_content_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusLeft="@id/btn_open_content_info"
+        android:nextFocusRight="@id/btn_open_content_info" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
