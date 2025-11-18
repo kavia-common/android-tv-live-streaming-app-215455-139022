@@ -31,6 +31,12 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activity to render assets/*.html screens via WebView -->
+        <activity
+            android:name=".WebContentActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
