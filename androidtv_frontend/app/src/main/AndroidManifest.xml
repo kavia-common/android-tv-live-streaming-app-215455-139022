@@ -34,6 +34,21 @@
             </intent-filter>
         </activity>
 
+        <!-- Leanback TV Home (optional entry) -->
+        <activity
+            android:name=".ui.TvHomeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <!-- Playback activity using Media3 -->
+        <activity
+            android:name=".ui.PlaybackActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:resizeableActivity="false"
+            android:supportsPictureInPicture="false"
+            android:launchMode="singleTask" />
+
         <!-- Activity to render assets/*.html screens via WebView -->
         <activity
             android:name=".WebContentActivity"

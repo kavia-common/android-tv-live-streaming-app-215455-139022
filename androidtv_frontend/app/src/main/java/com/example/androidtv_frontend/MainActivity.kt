@@ -1,16 +1,19 @@
 package com.example.androidtv_frontend
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import android.view.KeyEvent
 import android.widget.Button
 import android.widget.TextView
+import com.example.androidtv_frontend.ui.TvHomeActivity
 
 /**
  * Main Activity for Android TV
  * Extends FragmentActivity for Leanback compatibility
  *
- * Provides simple entries to navigate to HTML screens rendered via WebView.
+ * Provides entries to:
+ * - Leanback TV Home (rows/cards)
  * - Content Info (assets/content-info-1-539.html)
  * - Home Page (assets/home-page-1-2.html)
  */
@@ -63,6 +66,7 @@ class MainActivity : FragmentActivity() {
         /**
          * Navigate to Home Page screen in assets.
          * Triggered by D-pad OK/Enter or click on "Open Home Page".
+         * D-Pad RIGHT also opens the TV Home to provide a TV-first path quickly.
          */
         openHomePageBtn.setOnClickListener {
             val i = WebContentActivity.createIntent(
@@ -76,6 +80,10 @@ class MainActivity : FragmentActivity() {
                 (keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_ENTER)
             ) {
                 (v as? Button)?.performClick()
+                true
+            } else if (event?.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+                // Quick access to Leanback Home
+                startActivity(Intent(this, TvHomeActivity::class.java))
                 true
             } else {
                 false

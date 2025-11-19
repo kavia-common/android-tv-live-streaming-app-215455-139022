@@ -5,7 +5,13 @@
     <color name="tv_overlay">#CC000000</color>
     <color name="tv_primary">#FFFFFF</color>
     <color name="tv_secondary">#CCCCCC</color>
-    <color name="tv_accent">#2196F3</color>
+
+    <!-- Ocean Professional accents -->
+    <color name="ocean_primary">#2563EB</color>
+    <color name="ocean_secondary">#F59E0B</color>
+    <color name="ocean_error">#EF4444</color>
+
+    <color name="tv_accent">#2563EB</color>
     <color name="tv_button_focused">#FFFFFF</color>
     <color name="tv_button_normal">#80FFFFFF</color>
 </resources>
