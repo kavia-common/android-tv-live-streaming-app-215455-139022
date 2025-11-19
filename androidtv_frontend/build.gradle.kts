@@ -1,4 +1,7 @@
-// Top-level build file
+/**
+ * Top-level build file for the Android TV app.
+ * Uses AGP 8.3.x and Kotlin 1.9.x compatible with Gradle 8.7 wrapper.
+ */
 buildscript {
     repositories {
         google()

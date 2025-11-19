@@ -18,10 +18,12 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="androidtv_frontend"
+        android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:banner="@drawable/app_banner">
+        android:banner="@drawable/app_banner"
+        android:isGame="false">
 
+        <!-- TV launcher entrypoint -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -36,7 +38,8 @@
         <activity
             android:name=".WebContentActivity"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true" />
     </application>
 
 </manifest>
